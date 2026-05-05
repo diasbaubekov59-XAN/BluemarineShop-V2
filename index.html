@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLUEMARINE Kazakhstan | Новая коллекция</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <span>BLUEMARINE</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#" data-category="all" class="active">Все товары</a>
+                <a href="delivery.html">Доставка</a>
+                <a href="about.html">О нас</a>
+                <a href="contacts.html">Контакты</a>
+                <a href="#">Распродажа</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="search-box">
+                    <input type="text" id="search" placeholder="Поиск">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-actions">
+                    <a href="#" class="login"><i class="fas fa-user-circle"></i> Войти</a>
+                    <span class="divider">|</span>
+                    <a href="#" class="register"><i class="fas fa-user-plus"></i> Регистрация</a>
+                    <div class="favorites"><i class="far fa-heart"></i></div>
+                    <div class="cart" id="cart-trigger">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Slider -->
+    <section class="hero-slider">
+        <div class="slide active">
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&fit=crop&w=1920&q=80" alt="Коллекция 1">
+            <div class="slide-content">
+                <h1>Новая коллекция</h1>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&fit=crop&w=1920&q=80" alt="Коллекция 2">
+            <div class="slide-content">
+                <h1>Новинки недели</h1>
+            </div>
+        </div>
+        <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+    </section>
+
+    <!-- Filters & Products -->
+    <section class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="section-title">Новинки</h2>
+                <div class="filters">
+                    <div class="category-circle">
+                        <button class="category-btn" data-category="women"><i class="fas fa-female"></i> Женское</button>
+                        <button class="category-btn" data-category="men"><i class="fas fa-male"></i> Мужское</button>
+                    </div>
+                    <select id="sort">
+                        <option>По новизне</option>
+                        <option>По цене (мин)</option>
+                        <option>По цене (макс)</option>
+                    </select>
+                    <div class="price-range">
+                        <input type="range" id="price-min" min="0" max="100000" value="0">
+                        <input type="range" id="price-max" min="0" max="100000" value="100000">
+                        <span id="price-display">0 - 100 000 ₸</span>
+                    </div>
+                </div>
+            </div>
+            <div class="products-grid" id="products-grid"></div>
+            <div class="load-more">Загрузить ещё</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>КОМПАНИЯ</h4>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="delivery.html">Доставка и оплата</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>ПОКУПАТЕЛЯМ</h4>
+                    <ul>
+                        <li><a href="#">Как сделать заказ</a></li>
+                        <li><a href="#">Размеры и фит</a></li>
+                        <li><a href="#">Возврат товара</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>КОНТАКТЫ</h4>
+                    <p>📧 info@bluemarine.kz</p>
+                    <p>📞 +7 (775) 123-45-67</p>
+                    <p>📍 Алматы, Казахстан</p>
+                </div>
+                <div class="footer-col">
+                    <h4>СОЦИАЛЬНЫЕ СЕТИ</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BLUEMARINE Kazakhstan. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="modal hidden" id="cart-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Корзина</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="cart-items" id="cart-items"></div>
+            <div class="cart-footer">
+                <div class="total">Итого: <span id="cart-total">0 ₸</span></div>
+                <button class="checkout">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div class="modal hidden" id="quickview-modal">
+        <div class="modal-content product-detail">
+            <!-- Dynamic content -->
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal hidden" id="checkout-modal">
+        <div class="modal-content">
+            <form id="checkout-form">
+                <h3>Оформление заказа</h3>
+                <input type="text" placeholder="ФИО" required>
+                <input type="tel" placeholder="+7 (___) ___ __ __" required>
+                <input type="text" placeholder="Адрес доставки (Алматы)" required>
+                <div class="payment">
+                    <label><input type="radio" name="payment" value="card"> Карта</label>
+                    <label><input type="radio" name="payment" value="cash"> Наличные</label>
+                </div>
+                <button type="submit">Оплатить <span id="order-total">0 ₸</span></button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

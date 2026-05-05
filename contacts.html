@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | BLUEMARINE Kazakhstan</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span>BLUEMARINE</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html">Каталог</a>
+                <a href="about.html">О нас</a>
+                <a href="delivery.html">Доставка</a>
+                <a href="contacts.html" class="active">Контакты</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Поиск">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-actions">
+                    <a href="#" class="login"><i class="fas fa-user-circle"></i> Войти</a>
+                    <span class="divider">|</span>
+                    <a href="#" class="register"><i class="fas fa-user-plus"></i> Регистрация</a>
+                    <div class="favorites"><i class="far fa-heart"></i></div>
+                    <div class="cart" id="cart-trigger">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Свяжитесь с нами</h1>
+            <p>Наши менеджеры готовы помочь с заказом, консультацией по размеру и информацией по доставке.</p>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section class="contacts-section">
+        <div class="container">
+            <div class="contacts-grid">
+                <div class="contact-info">
+                    <h2>Информация для связи</h2>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Телефон</h3>
+                            <p>+7 (727) 344-99-99</p>
+                            <p>Пн-Пт: 09:00 - 18:00</p>
+                            <p>Сб-Вс: 10:00 - 16:00</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>E-mail</h3>
+                            <p>info@bluemarine.kz</p>
+                            <p>support@bluemarine.kz</p>
+                            <p>Ответ в течение 24 часов</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Адрес офиса</h3>
+                            <p>г. Алматы, проспект Абая, 99</p>
+                            <p>Офис 305, Бизнес центр "Серебристая плаза"</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>График работы</h3>
+                            <p>Пн-Пт: 09:00 - 18:00</p>
+                            <p>Сб: 10:00 - 16:00</p>
+                            <p>Вс: Выходной</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h2>Отправьте нам сообщение</h2>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Ваше имя</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Тема</label>
+                            <select id="subject" name="subject" required>
+                                <option>Выберите тему</option>
+                                <option>Вопрос о товаре</option>
+                                <option>Проблема с заказом</option>
+                                <option>Возврат товара</option>
+                                <option>Сотрудничество</option>
+                                <option>Другое</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Сообщение</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Отправить</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="social-section">
+                <h2>Следите за нами в соцсетях</h2>
+                <div class="social-icons">
+                    <a href="https://instagram.com" target="_blank" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" title="Facebook">
+                        <i class="fab fa-facebook"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                    <a href="https://telegram.me" target="_blank" title="Telegram">
+                        <i class="fab fa-telegram"></i>
+                        <span>Telegram</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>BLUEMARINE</h4>
+                    <ul>
+                        <li><a href="index.html">Каталог</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="delivery.html">Доставка</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Информация</h4>
+                    <ul>
+                        <li><a href="#">Политика приватности</a></li>
+                        <li><a href="#">Условия использования</a></li>
+                        <li><a href="#">Часто задаваемые вопросы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>📞 +7 (727) 344-99-99</p>
+                    <p>✉️ info@bluemarine.kz</p>
+                    <p>📍 Алматы, Казахстан</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Следите за нами</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BLUEMARINE Kazakhstan. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Спасибо за сообщение! Мы ответим вам в течение 24 часов.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
